@@ -4,7 +4,7 @@
   "private": true,
   "description": "Личный проект «Что посмотреть» от HTML Academy",
   "scripts": {
-    "eslint": "eslint src/**/*.js",
+    "eslint": "eslint --ext .jsx --ext .js src/",
     "test": "npm run eslint"
   },
   "devDependencies": {
@@ -13,5 +13,8 @@
   },
   "engines": {
     "node": "10"
+  },
+  "dependencies": {
+    "eslint-plugin-react": "7.18.3"
   }
 }
