@@ -24,13 +24,13 @@ const App = (props) => {
         <Route path="/mylist" exact>
           <MyListPage />
         </Route>
-        <Route path="/films:id?" exact>
+        <Route path="/films/:id?" exact>
           <MoviePage />
         </Route>
-        <Route path="/films:id?/review" exact>
+        <Route path="/films/:id?/review" exact>
           <AddReview />
         </Route>
-        <Route path="/player:id?" exact>
+        <Route path="/player/:id?" exact>
           <PlayerPage />
         </Route>
       </Switch>
