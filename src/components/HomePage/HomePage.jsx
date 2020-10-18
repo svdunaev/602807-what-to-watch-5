@@ -6,7 +6,7 @@ const HomePage = (props) => {
   const {promoTitle, promoGenre, promoReleaseDate} = props;
 
   return (
-    <section className="f123">
+    <section className="main-page">
       <section className="movie-card">
         <div className="movie-card__bg">
           <img src="img/bg-the-grand-budapest-hotel.jpg" alt="The Grand Budapest Hotel" />
