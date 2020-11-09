@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App/App";
+import films from "./mock/fimls";
+import reviews from "./mock/reviews";
 
 const PromoMovie = {
   PROMO_TITLE: `The Grand Budapest Hotel`,
@@ -13,6 +15,8 @@ ReactDOM.render(
       promoTitle={PromoMovie.PROMO_TITLE}
       promoGenre={PromoMovie.PROMO_GENRE}
       promoReleaseDate={PromoMovie.PROMO_DATE}
+      films={films}
+      reviews={reviews}
     />,
     document.querySelector(`#root`)
 );
