@@ -1,6 +1,7 @@
 import React from "react";
 import ReviewForm from "../ReviewForm/ReviewForm";
 import {Link} from "react-router-dom";
+import PropTypes from "react-router-dom";
 
 const AddReview = (props) => {
   const {films} = props;
@@ -52,6 +53,12 @@ const AddReview = (props) => {
 
     </section>
   );
+};
+
+AddReview.propTypes = {
+  films: PropTypes.array.isRequired,
+  poster: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default AddReview;
