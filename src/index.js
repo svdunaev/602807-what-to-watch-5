@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App/App";
-import films from "./mock/fimls";
+import films from "./mock/films";
 import reviews from "./mock/reviews";
 
 const PromoMovie = {
