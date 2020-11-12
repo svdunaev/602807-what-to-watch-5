@@ -10,25 +10,24 @@ import SignInPage from "../SignInPage/SignInPage";
 
 
 const App = (props) => {
-  const {promoTitle, promoGenre, promoReleaseDate} = props;
+  const {films} = props;
 
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact>
-          <HomePage promoTitle={promoTitle} promoGenre={promoGenre} promoReleaseDate={promoReleaseDate} />
-        </Route>
+        <Route exact path="/" render={({history}) => (
+          <HomePage films={films} onCardClick={() => history.push(`/films/:id`)} onPlayBtnClick={() => history.push(`/player/:id`)}/>
+        )} ></Route>
         <Route path="/login" exact>
           <SignInPage />
         </Route>
         <Route path="/mylist" exact>
           <MyListPage />
         </Route>
-        <Route path="/films/:id?" exact>
-          <MoviePage />
+        <Route path="/films/:id?" exact render={({history}) => (<MoviePage films={films} onCardClick={() => history.push(`films/:id`)} />)}>
         </Route>
-        <Route path="/films/:id?/review" exact>
-          <AddReview />
+        <Route exact path="/films/:id/review">
+          <AddReview films={films}/>
         </Route>
         <Route path="/player/:id?" exact>
           <PlayerPage />
@@ -42,6 +41,7 @@ App.propTypes = {
   promoGenre: PropTypes.string.isRequired,
   promoTitle: PropTypes.string.isRequired,
   promoReleaseDate: PropTypes.number.isRequired,
+  films: PropTypes.array.isRequired,
 };
 
 export default App;
