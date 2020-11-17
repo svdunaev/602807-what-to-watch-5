@@ -55,10 +55,5 @@ const AddReview = (props) => {
   );
 };
 
-AddReview.propTypes = {
-  films: PropTypes.array.isRequired,
-  poster: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-};
 
 export default AddReview;
