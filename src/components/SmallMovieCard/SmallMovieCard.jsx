@@ -2,6 +2,7 @@ import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
 import MoviePreview from "../movie-preview/movie-preview";
+import filmProptypes from "../../proptypes-valid";
 
 export default class SmallMovieCard extends PureComponent {
   constructor(props) {
@@ -49,8 +50,6 @@ export default class SmallMovieCard extends PureComponent {
 }
 
 SmallMovieCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  cover: PropTypes.string.isRequired,
-  film: PropTypes.object.isRequired,
+  film: PropTypes.shape(filmProptypes),
 };
 

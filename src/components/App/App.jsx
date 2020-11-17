@@ -26,9 +26,11 @@ const App = (props) => {
         </Route>
         <Route path="/films/:id?" exact render={({history}) => (<MoviePage films={films} onCardClick={() => history.push(`films/:id`)} />)}>
         </Route>
-        <Route exact path="/films/:id/review">
-          <AddReview films={films}/>
-        </Route>
+        <Route exact path="/films/:id/review" render={({match}) => {
+          const film = films.find(({id}) => id === Number(match.params.id));
+          return <AddReview film={film}/>;
+        }}
+        />
         <Route path="/player/:id?" exact>
           <PlayerPage />
         </Route>
