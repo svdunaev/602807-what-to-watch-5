@@ -2,7 +2,7 @@ import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
 import MoviePreview from "../movie-preview/movie-preview";
-import filmProptypes from "../../proptypes-valid";
+import filmProptypes from "../../proptypes-validation";
 
 export default class SmallMovieCard extends PureComponent {
   constructor(props) {

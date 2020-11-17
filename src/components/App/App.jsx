@@ -1,12 +1,12 @@
 import React from "react";
 import {Switch, Route, BrowserRouter} from "react-router-dom";
-import HomePage from "../HomePage/HomePage";
+import HomePage from "../home-page/home-page";
 import PropTypes from "prop-types";
-import MoviePage from "../MoviePage/MoviePage";
-import AddReview from "../AddReview/AddReview";
-import MyListPage from "../MyListPage/MyListPage";
-import PlayerPage from "../PlayerPage/PlayerPage";
-import SignInPage from "../SignInPage/SignInPage";
+import MoviePage from "../movie-page/movie-page";
+import AddReview from "../add-review/add-review";
+import MyListPage from "../my-list-page/my-list-page";
+import PlayerPage from "../player-page/player-page";
+import SignInPage from "../sign-in-page/sign-in-page";
 
 
 const App = (props) => {

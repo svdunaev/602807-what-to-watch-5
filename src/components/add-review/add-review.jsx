@@ -1,8 +1,8 @@
 import React from "react";
-import ReviewForm from "../ReviewForm/ReviewForm";
+import ReviewForm from "../review-form/review-form";
 import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
-import filmProptypes from "../../proptypes-valid";
+import filmProptypes from "../../proptypes-validation";
 
 const AddReview = ({film}) => {
   return (

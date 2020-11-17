@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const MoviePreview = ({previewvideo, cover}) => {
   return (
-    <video src={previewvideo} className="player__video" poster={cover} autoPlay muted></video>
+    <video src={previewvideo} className="player__video" poster={cover} autoPlay muted />
   );
 };
 
