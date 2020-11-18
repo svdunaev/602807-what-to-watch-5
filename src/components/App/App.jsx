@@ -1,12 +1,12 @@
 import React from "react";
 import {Switch, Route, BrowserRouter} from "react-router-dom";
-import HomePage from "../HomePage/HomePage";
+import HomePage from "../home-page/home-page";
 import PropTypes from "prop-types";
-import MoviePage from "../MoviePage/MoviePage";
-import AddReview from "../AddReview/AddReview";
-import MyListPage from "../MyListPage/MyListPage";
-import PlayerPage from "../PlayerPage/PlayerPage";
-import SignInPage from "../SignInPage/SignInPage";
+import MoviePage from "../movie-page/movie-page";
+import AddReview from "../add-review/add-review";
+import MyListPage from "../my-list-page/my-list-page";
+import PlayerPage from "../player-page/player-page";
+import SignInPage from "../sign-in-page/sign-in-page";
 
 
 const App = (props) => {
@@ -16,7 +16,7 @@ const App = (props) => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" render={({history}) => (
-          <HomePage films={films} onCardClick={() => history.push(`/films/:id`)} onPlayBtnClick={() => history.push(`/player/:id`)}/>
+          <HomePage promoGenre={props.promoGenre} promoTitle={props.promoTitle} promoReleaseDate={props.promoReleaseDate} films={films} onCardClick={() => history.push(`/films/:id`)} onPlayBtnClick={() => history.push(`/player/:id`)}/>
         )} ></Route>
         <Route path="/login" exact>
           <SignInPage />
@@ -26,9 +26,11 @@ const App = (props) => {
         </Route>
         <Route path="/films/:id?" exact render={({history}) => (<MoviePage films={films} onCardClick={() => history.push(`films/:id`)} />)}>
         </Route>
-        <Route exact path="/films/:id/review">
-          <AddReview films={films}/>
-        </Route>
+        <Route exact path="/films/:id/review" render={({match}) => {
+          const film = films.find(({id}) => id === Number(match.params.id));
+          return <AddReview film={film}/>;
+        }}
+        />
         <Route path="/player/:id?" exact>
           <PlayerPage />
         </Route>

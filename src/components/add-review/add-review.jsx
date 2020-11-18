@@ -1,16 +1,15 @@
 import React from "react";
-import ReviewForm from "../ReviewForm/ReviewForm";
+import ReviewForm from "../review-form/review-form";
 import {Link} from "react-router-dom";
-import PropTypes from "react-router-dom";
+import PropTypes from "prop-types";
+import filmProptypes from "../../proptypes-validation";
 
-const AddReview = (props) => {
-  const {films} = props;
-  const {poster, title, id} = films[0];
+const AddReview = ({film}) => {
   return (
     <section className="movie-card movie-card--full">
       <div className="movie-card__header">
         <div className="movie-card__bg">
-          <img src="/img/bg-the-grand-budapest-hotel.jpg" alt={title} />
+          <img src="/img/bg-the-grand-budapest-hotel.jpg" alt={film.title} />
         </div>
 
         <h1 className="visually-hidden">WTW</h1>
@@ -27,7 +26,7 @@ const AddReview = (props) => {
           <nav className="breadcrumbs">
             <ul className="breadcrumbs__list">
               <li className="breadcrumbs__item">
-                <Link to={`/films/${id}`} className="breadcrumbs__link">{title}</Link>
+                <Link to={`/films/${film.id}`} className="breadcrumbs__link">{film.title}</Link>
               </li>
               <li className="breadcrumbs__item">
                 <a className="breadcrumbs__link">Add review</a>
@@ -43,7 +42,7 @@ const AddReview = (props) => {
         </header>
 
         <div className="movie-card__poster movie-card__poster--small">
-          <img src={poster} alt={title} width="218" height="327" />
+          <img src={film.poster} alt={film.title} width="218" height="327" />
         </div>
       </div>
 
@@ -56,9 +55,7 @@ const AddReview = (props) => {
 };
 
 AddReview.propTypes = {
-  films: PropTypes.array.isRequired,
-  poster: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  film: PropTypes.shape(filmProptypes),
 };
 
 export default AddReview;
