@@ -2,7 +2,7 @@ import React from "react";
 import ReviewForm from "../review-form/review-form";
 import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
-import filmProptypes from "../../proptypes-validation";
+import {filmProptypes} from "../../proptypes-validation";
 
 const AddReview = ({film}) => {
   return (

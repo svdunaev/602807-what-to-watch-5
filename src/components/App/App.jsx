@@ -24,8 +24,10 @@ const App = (props) => {
         <Route path="/mylist" exact>
           <MyListPage />
         </Route>
-        <Route path="/films/:id?" exact render={({history}) => (<MoviePage films={films} onCardClick={() => history.push(`films/:id`)} />)}>
-        </Route>
+        <Route exact path="/films/:id" render={({match}) => {
+          const film = films.find(({id}) => id === Number(match.params.id));
+          return <MoviePage films={films} film={film} />;
+        }} />
         <Route exact path="/films/:id/review" render={({match}) => {
           const film = films.find(({id}) => id === Number(match.params.id));
           return <AddReview film={film}/>;

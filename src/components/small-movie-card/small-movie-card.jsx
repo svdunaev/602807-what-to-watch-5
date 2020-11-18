@@ -2,7 +2,7 @@ import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
 import MoviePreview from "../movie-preview/movie-preview";
-import filmProptypes from "../../proptypes-validation";
+import {filmProptypes} from "../../proptypes-validation";
 
 export default class SmallMovieCard extends PureComponent {
   constructor(props) {
@@ -12,18 +12,18 @@ export default class SmallMovieCard extends PureComponent {
 
     this.state = {isPlayingVideo: false};
 
-    this.onMouseOverHandler = this.onMouseOverHandler.bind(this);
-    this.onMouseOutHandler = this.onMouseOutHandler.bind(this);
+    this.handleMouseOver = this.handleMouseOver.bind(this);
+    this.handleMouseOut = this.handleMouseOut.bind(this);
   }
 
   render() {
     return (
       <article className="small-movie-card catalog__movies-card">
-        <div className="small-movie-card__image" onMouseOver={() => this.onMouseOverHandler()} onMouseOut={() => this.onMouseOutHandler()}>
+        <div className="small-movie-card__image" onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut}>
           {this.getImageOrVideo()}
         </div>
         <h3 className="small-movie-card__title">
-          <Link to="fimls/:id" className="small-movie-card__link" href="movie-page.html">{this.film.title}</Link>
+          <Link to={`/films/${this.film.id}`} className="small-movie-card__link" href="movie-page.html">{this.film.title}</Link>
         </h3>
       </article>
     );
@@ -36,13 +36,13 @@ export default class SmallMovieCard extends PureComponent {
     );
   }
 
-  onMouseOverHandler() {
+  handleMouseOver() {
     this._timeoutId = setTimeout(() => {
       this.setState({isPlayingVideo: true});
     }, 1000);
   }
 
-  onMouseOutHandler() {
+  handleMouseOut() {
     this.setState({isPlayingVideo: false});
     clearTimeout(this._timeoutId);
     this._timeoutId = null;
