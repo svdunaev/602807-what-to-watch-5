@@ -16,7 +16,7 @@ const App = (props) => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" render={({history}) => (
-          <HomePage films={films} onCardClick={() => history.push(`/films/:id`)} onPlayBtnClick={() => history.push(`/player/:id`)}/>
+          <HomePage promoGenre={props.promoGenre} promoTitle={props.promoTitle} promoReleaseDate={props.promoReleaseDate} films={films} onCardClick={() => history.push(`/films/:id`)} onPlayBtnClick={() => history.push(`/player/:id`)}/>
         )} ></Route>
         <Route path="/login" exact>
           <SignInPage />
