@@ -21,7 +21,7 @@ export default class Tabs extends PureComponent {
     this.setState({activeTab: tab});
   }
   getTabContent() {
-    const activeTab = this.state;
+    const {activeTab} = this.state;
     const {film, reviews} = this.props;
 
     switch (activeTab) {
@@ -30,7 +30,7 @@ export default class Tabs extends PureComponent {
       case MovieTabs.DETAILS:
         return <MovieDetails film={film}/>;
       case MovieTabs.REVIEWS:
-        return <MovieReviews film={reviews}/>;
+        return <MovieReviews reviews={reviews}/>;
     }
     return null;
   }

@@ -10,7 +10,7 @@ import SignInPage from "../sign-in-page/sign-in-page";
 
 
 const App = (props) => {
-  const {films} = props;
+  const {films, reviews} = props;
 
   return (
     <BrowserRouter>
