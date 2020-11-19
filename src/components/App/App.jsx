@@ -7,6 +7,7 @@ import AddReview from "../add-review/add-review";
 import MyListPage from "../my-list-page/my-list-page";
 import PlayerPage from "../player-page/player-page";
 import SignInPage from "../sign-in-page/sign-in-page";
+import {filmProptypes, reviewsProptypes} from "../../proptypes-validation";
 
 
 const App = (props) => {
@@ -26,7 +27,7 @@ const App = (props) => {
         </Route>
         <Route exact path="/films/:id" render={({match}) => {
           const film = films.find(({id}) => id === Number(match.params.id));
-          return <MoviePage films={films} film={film} />;
+          return <MoviePage films={films} film={film} reviews={reviews} />;
         }} />
         <Route exact path="/films/:id/review" render={({match}) => {
           const film = films.find(({id}) => id === Number(match.params.id));
@@ -45,7 +46,8 @@ App.propTypes = {
   promoGenre: PropTypes.string.isRequired,
   promoTitle: PropTypes.string.isRequired,
   promoReleaseDate: PropTypes.number.isRequired,
-  films: PropTypes.array.isRequired,
+  films: PropTypes.arrayOf(PropTypes.shape(filmProptypes)),
+  reviews: PropTypes.arrayOf(PropTypes.shape(reviewsProptypes)),
 };
 
 export default App;

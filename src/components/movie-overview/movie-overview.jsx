@@ -22,7 +22,7 @@ const MovieOverview = ({film}) => {
         </p>
         <p className="movie-card__starring">
           <strong>
-            Starring: {cast}
+            Starring: {cast.join(`, `)}
           </strong>
         </p>
       </div>

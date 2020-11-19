@@ -1,9 +1,10 @@
-import React, { PureComponent } from "react";
+import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import {MovieTabs, TabsList} from "./tabs-consts";
 import MovieOverview from "../movie-overview/movie-overview";
 import MovieDetails from "../movie-details/movie-details";
 import MovieReviews from "../movie-reviews/movie-reviews";
+import {filmProptypes, reviewsProptypes} from "../../proptypes-validation";
 
 export default class Tabs extends PureComponent {
   constructor(props) {
@@ -56,3 +57,8 @@ export default class Tabs extends PureComponent {
     );
   }
 }
+
+Tabs.propTypes = {
+  film: PropTypes.shape(filmProptypes).isRequired,
+  reviews: PropTypes.arrayOf(PropTypes.shape(reviewsProptypes)),
+};

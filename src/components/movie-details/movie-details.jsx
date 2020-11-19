@@ -14,7 +14,7 @@ const MovieDetails = ({film}) => {
         </p>
         <p className="movie-card__details-item">
           <strong className="movie-card__details-name">Starring</strong>
-          <span className="movie-card__details-value">{cast}</span>
+          <span className="movie-card__details-value">{cast.join(`, `)}</span>
         </p>
       </div>
 

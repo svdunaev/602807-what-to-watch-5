@@ -13,4 +13,16 @@ export const filmProptypes = {
   poster: PropTypes.string.isRequired,
   previewvideo: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
+  decription: PropTypes.string.isRequired,
+  reviewsCount: PropTypes.number.isRequired,
+  bgsrc: PropTypes.string.isRequired,
 };
+
+export const reviewsProptypes = {
+  username: PropTypes.string.isRequired,
+  userscore: PropTypes.string.isRequired,
+  reviewtext: PropTypes.string.isRequired,
+  reviewdate: PropTypes.string.isRequired,
+};
+
+

@@ -2,6 +2,8 @@ import React from "react";
 import {Link} from "react-router-dom";
 import Tabs from "../tabs/tabs";
 import MoviesList from "../movies-list/movies-list";
+import PropTypes from "prop-types";
+import {filmProptypes, reviewsProptypes} from "../../proptypes-validation";
 
 const MoviePage = ({films, film, reviews}) => {
   const SAME_GENRE_COUNT = 4;
@@ -98,6 +100,12 @@ const MoviePage = ({films, film, reviews}) => {
       </div>
     </section>
   );
+};
+
+MoviePage.propTypes = {
+  film: PropTypes.shape(filmProptypes),
+  films: PropTypes.arrayOf(PropTypes.shape(filmProptypes)),
+  reviews: PropTypes.arrayOf(PropTypes.shape(reviewsProptypes)),
 };
 
 export default MoviePage;
