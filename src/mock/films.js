@@ -12,6 +12,9 @@ export default [
     poster: `https://www.joblo.com/assets/images/oldsite/posters/images/full/therev-2post-01-gallery.jpg`,
     previewvideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     id: 0,
+    decription: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget.`,
+    reviewsCount: 10,
+    bgsrc: `/img/bg-the-grand-budapest-hotel.jpg`,
   },
   {
     title: `No Country for old Men`,
@@ -26,6 +29,9 @@ export default [
     poster: `https://www.joblo.com/assets/images/oldsite/posters/images/full/2007-no_country_for_old_men-1.jpg`,
     previewvideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     id: 1,
+    decription: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget.`,
+    reviewsCount: 10,
+    bgsrc: `/img/bg-the-grand-budapest-hotel.jpg`,
   },
   {
     title: `Macbeth`,
@@ -40,6 +46,9 @@ export default [
     poster: `https://www.joblo.com/assets/images/oldsite/posters/images/full/macbeth-nposter-gallery.jpg`,
     previewvideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     id: 2,
+    decription: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget.`,
+    reviewsCount: 10,
+    bgsrc: `/img/bg-the-grand-budapest-hotel.jpg`,
   },
   {
     title: `Johnny English`,
@@ -54,6 +63,9 @@ export default [
     poster: `https://www.joblo.com/assets/images/oldsite/posters/images/full/2003-johnny_english-3.jpg`,
     previewvideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     id: 3,
+    decription: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget.`,
+    reviewsCount: 10,
+    bgsrc: `/img/bg-the-grand-budapest-hotel.jpg`,
   },
   {
     title: `Aviator`,
@@ -68,6 +80,9 @@ export default [
     poster: `https://www.joblo.com/assets/images/oldsite/posters/images/full/2004-aviator-2.jpg`,
     previewvideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     id: 4,
+    decription: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget.`,
+    reviewsCount: 10,
+    bgsrc: `/img/bg-the-grand-budapest-hotel.jpg`,
   },
   {
     title: `Bohemian Rhapsody`,
@@ -82,6 +97,9 @@ export default [
     poster: `https://www.joblo.com/assets/images/oldsite/posters/images/full/bohemian_rhapsody_poster-xl.jpg`,
     previewvideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     id: 5,
+    decription: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget.`,
+    reviewsCount: 10,
+    bgsrc: `/img/bg-the-grand-budapest-hotel.jpg`,
   },
   {
     title: `Snatch`,
@@ -96,6 +114,9 @@ export default [
     poster: `https://www.joblo.com/assets/images/oldsite/posters/images/full/2000-poster-snatch-1.jpg`,
     previewvideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     id: 6,
+    decription: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget.`,
+    reviewsCount: 10,
+    bgsrc: `/img/bg-the-grand-budapest-hotel.jpg`,
   },
   {
     title: `Pulp Fiction`,
@@ -110,6 +131,9 @@ export default [
     poster: `https://www.joblo.com/assets/images/oldsite/posters/images/full/1994-pulp-fiction-poster4.jpg`,
     previewvideo: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     id: 7,
+    decription: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet varius magna, non porta ligula feugiat eget.`,
+    reviewsCount: 10,
+    bgsrc: `/img/bg-the-grand-budapest-hotel.jpg`,
   },
 ];
 
