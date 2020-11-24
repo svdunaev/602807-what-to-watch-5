@@ -1,4 +1,4 @@
-export default [
+const films = [
   {
     title: `Revenant`,
     year: `2015`,
@@ -137,3 +137,4 @@ export default [
   },
 ];
 
+export default films;

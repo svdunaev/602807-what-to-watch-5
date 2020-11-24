@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SmallMovieCard from "../small-movie-card/small-movie-card";
+import {connect} from "react-redux";
 
 const MoviesList = ({films}) =>{
 
@@ -11,9 +12,13 @@ const MoviesList = ({films}) =>{
   );
 };
 
+const mapStateToProps = (state) => ({
+  films: state.filteredFilms,
+});
 
 MoviesList.propTypes = {
   films: PropTypes.array.isRequired,
 };
 
-export default MoviesList;
+export {MoviesList};
+export default connect(mapStateToProps)(MoviesList);
